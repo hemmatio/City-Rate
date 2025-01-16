@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="mainbody">
+      <h1><%= title %></h1>
+      <span>
+      <img class="cityimage" src = "<%= cityDetails.originalimage.source %>" alt = "city image">
+      </span>
+      <h2>Your city is <%= cityDetails.title %></h2>
+      <p id="city-extract"><%= cityDetails.extract %></p>
+
+      <div class="rating-container">
+        <h3>Rate <span id="city-name"><%= cityDetails.title %></span></h3>
+        <div id="stars">
+          <button onclick="rateCity(1)">⭐</button>
+          <button onclick="rateCity(2)">⭐⭐</button>
+          <button onclick="rateCity(3)">⭐⭐⭐</button>
+          <button onclick="rateCity(4)">⭐⭐⭐⭐</button>
+          <button onclick="rateCity(5)">⭐⭐⭐⭐⭐</button>
+        </div>
+        <p id="average-rating" style="display: none;">Average Rating: Not Rated Yet</p>
+      </div>
+
+      <button id="getCity" onclick="refresh()">Get another city</button>
+    </div>
+
+    <script>
+      const cityDetails = {
+        title: "<%- cityDetails.title %>",
+        pageLink: "<%- cityDetails.content_urls.desktop.page %>"
+      };
+      const extractElement = document.getElementById('city-extract');
+      const cityLink = `<a href="${cityDetails.pageLink}" target="_blank">${cityDetails.title}</a>`;
+      extractElement.innerHTML = extractElement.innerHTML.replace(cityDetails.title, cityLink);
+    </script>
+
+
+    <script>
+      function refresh() {
+        window.location.href = "/";
+      }
+    </script>
+
+    <script src="/javascripts/ratings.js"></script>
+
+  </body>
+</html>

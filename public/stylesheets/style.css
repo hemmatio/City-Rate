@@ -1,0 +1,85 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: linear-gradient(to bottom, #f0f8ff, #e6f2ff);
+  color: #333;
+}
+
+a {
+  color: #00B7FF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img.cityimage {
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+div.mainbody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #004080;
+}
+
+h2 {
+  font-size: 24px;
+  color: #0066cc;
+}
+
+p#city-extract {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 10px;
+}
+
+button#getCity {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background: #0078d4;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button#getCity:hover {
+  background: #005bb5;
+}
+
+.star {
+  display: inline-block;
+  align-items: center;
+  font-size: 20px;
+  line-height: 1; /* Ensure proper vertical alignment */
+  color: gold;
+  width: 20px; /* Fixed width for consistent star sizing */
+  height: 20px; /* Ensures equal vertical space */
+  overflow: hidden; /* For fractional stars */
+  position: relative; /* To allow inline alignment of fractions */
+  text-align: center; /* Ensures proper text alignment inside star area */
+}
+
+
